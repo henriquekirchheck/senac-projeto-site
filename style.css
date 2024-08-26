@@ -2,12 +2,33 @@
   box-sizing: border-box;
 }
 
+.dark {
+  --bg: #303030;
+  --text: white;
+  --highlight: #575757;
+  --header: #222;
+  --footer: #222;
+  --gear: #cfcfcf;
+  --symbol: white;
+}
+.light {
+  --bg: #ffffff;
+  --text: black;
+  --highlight: #b8b8b8;
+  --header: #dfdfdf;
+  --footer: #dfdfdf;
+  --gear: #707070;
+  --symbol: black;
+}
+
 body {
   width: 100dvw;
   height: 100dvh;
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 .page {
@@ -24,13 +45,28 @@ body {
   align-items: center;
 }
 
+.index {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-size: 22px;
+}
+
+.banner {
+  width: 90%;
+  border: 2px black solid;
+  border-radius: 16px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #222;
-  color: white;
-  padding: 0.4rem;
+  background-color: var(--header);
+  padding: 0.4rem 0.8rem;
 }
 
 .nav > ul {
@@ -41,11 +77,11 @@ body {
 
 .nav > ul a {
   text-decoration: none;
-  color: white;
   padding: 0.5rem;
-  background-color: #575757;
+  background-color: var(--highlight);
   border-radius: 12px;
   transition: filter 200ms ease-in-out;
+  color: var(--text);
 }
 
 .nav > ul a:hover {
@@ -54,7 +90,7 @@ body {
 
 .gear {
   width: 64px;
-  fill: #cfcfcf;
+  fill: var(--gear);
   transition: transform 300ms ease-in-out;
 }
 
@@ -66,6 +102,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #222;
-  color: white;
+  background-color: var(--footer);
+}
+
+.light-switch {
+  aspect-ratio: 1/1;
+  background-color: var(--highlight);
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  transition: filter 200ms ease-in-out;
+}
+
+.light-switch:hover{
+  filter: invert();
+}
+
+.light .light-switch > .moon {
+  display: none;
+}
+
+.dark .light-switch > .sun {
+  display: none;
+}
+
+.light-switch > .symbol {
+  width: 28px;
+  height: 28px;
+  fill: var(--symbol);
 }
