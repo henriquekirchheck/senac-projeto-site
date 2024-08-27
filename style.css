@@ -10,6 +10,7 @@
   --footer: #222;
   --gear: #cfcfcf;
   --symbol: white;
+  --services:#575757;
 }
 .light {
   --bg: #ffffff;
@@ -19,6 +20,7 @@
   --footer: #dfdfdf;
   --gear: #707070;
   --symbol: black;
+  --services:#b8b8b8;
 }
 
 body {
@@ -103,6 +105,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--footer);
+  margin-top: auto;
 }
 
 .light-switch {
@@ -131,4 +134,79 @@ body {
   width: 28px;
   height: 28px;
   fill: var(--symbol);
+}
+.intro {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2em;
+}
+
+/* Seção de serviços */
+.services {
+  margin: 40px 0;
+  text-align: center;
+  width: 50%;
+ justify-content: center;
+ margin: auto;
+}
+
+.services h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services ul li {
+  background-color: var(--services);
+  color: var(--text);
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.services ul li h3 {
+  margin-top: 0;
+}
+
+.services ul li p {
+  margin: 10px 0 0;
+}
+
+/* Seção de chamada para ação */
+.cta {
+  text-align: center;
+  margin: 40px 0;
+  margin-top: 50px;
+}
+
+.cta h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+}
+
+.cta a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.cta a:hover {
+  text-decoration: underline;
 }
