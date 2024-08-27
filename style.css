@@ -210,3 +210,28 @@ body {
 .cta a:hover {
   text-decoration: underline;
 }
+
+.sobre-nos {
+  margin: 30px;
+
+}
+
+.sobre-nos p {
+  justify-content: justify;
+  font-size: 18px;
+}
+
+.sobre-nos h2 {
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+
+.sobre-nos ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.junta-se {
+  margin-bottom: 2rem;
+}
