@@ -1,4 +1,6 @@
- /** @type {NodeListOf<HTMLButtonElement>} */
+// @ts-check
+
+/** @type {NodeListOf<HTMLButtonElement>} */
 const switchButtons = document.querySelectorAll(".light-switch");
 
 switchButtons.forEach((button) => {

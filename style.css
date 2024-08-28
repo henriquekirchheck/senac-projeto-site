@@ -10,7 +10,7 @@
   --footer: #222;
   --gear: #cfcfcf;
   --symbol: white;
-  --services:#575757;
+  --services: #575757;
 }
 .light {
   --bg: #ffffff;
@@ -20,7 +20,7 @@
   --footer: #dfdfdf;
   --gear: #707070;
   --symbol: black;
-  --services:#b8b8b8;
+  --services: #f1f1f1;
 }
 
 body {
@@ -28,7 +28,8 @@ body {
   height: 100dvh;
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: var(--bg);
   color: var(--text);
 }
@@ -48,7 +49,8 @@ body {
 }
 
 .index {
-  width: 60%;
+  max-width: 750px;
+  width: 85%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -58,7 +60,8 @@ body {
 }
 
 .banner {
-  width: 90%;
+  max-width: 700px;
+  width: 100%;
   border: 2px black solid;
   border-radius: 16px;
 }
@@ -68,13 +71,19 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--header);
+  gap: 1rem;
   padding: 0.4rem 0.8rem;
+}
+
+.nav {
+  overflow-x: scroll;
 }
 
 .nav > ul {
   display: flex;
   list-style: none;
   gap: 0.4rem;
+  padding: 0;
 }
 
 .nav > ul a {
@@ -118,7 +127,7 @@ body {
   transition: filter 200ms ease-in-out;
 }
 
-.light-switch:hover{
+.light-switch:hover {
   filter: invert();
 }
 
@@ -135,6 +144,7 @@ body {
   height: 28px;
   fill: var(--symbol);
 }
+
 .intro {
   text-align: center;
   margin: 40px 0;
@@ -154,8 +164,8 @@ body {
   margin: 40px 0;
   text-align: center;
   width: 50%;
- justify-content: center;
- margin: auto;
+  justify-content: center;
+  margin: auto;
 }
 
 .services h2 {
@@ -213,7 +223,6 @@ body {
 
 .sobre-nos {
   margin: 30px;
-
 }
 
 .sobre-nos p {
@@ -260,8 +269,8 @@ body {
 
 .contact-form button {
   padding: 10px 20px;
-  background-color:var(--highlight);
-  color:var(--text);
+  background-color: var(--highlight);
+  color: var(--text);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -270,10 +279,72 @@ body {
 .contact-form button:hover {
   background-color: #0056b3;
 }
-.contact-section h1{
+.contact-section h1 {
   text-align: center;
   font-size: 30px;
 }
-.contact-section p{
+.contact-section p {
   font-size: 18px;
+}
+
+.products {
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-list > h2 {
+  font-size: xx-large;
+}
+
+.product-list > ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 750px) {
+  .product-list > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.product-list > ul img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.product-list > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--services);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+}
+
+.product-list > ul > li > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-list > ul h3 {
+  font-size: medium;
+}
+.product-list > ul span {
+  font-size: large;
+  text-align: end;
 }

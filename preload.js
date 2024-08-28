@@ -1,3 +1,5 @@
+// @ts-check
+
 function main() {
   const media = window.matchMedia("(prefers-color-scheme: dark)");
   const localStorage = window.localStorage.getItem("theme");
